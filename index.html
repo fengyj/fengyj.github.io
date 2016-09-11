@@ -254,6 +254,131 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/10/coding-standard/" itemprop="url">
+                  Coding Standard
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-10T00:48:03+08:00" content="2016-09-10">
+              2016-09-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote><p>The working code is the most accurate document.</p>
+<footer><strong>Don't know who said it</strong></footer></blockquote>
+<p>I think, as a developer, when working, here are 3 basic rules needs to follow:</p>
+<ol>
+<li>Implement the requirement with no error;</li>
+<li>Acceptable performance;</li>
+<li>Readable code.</li>
+</ol>
+<p>The 1st one, it’s the very basic one. If code cannot work correctly, it’s useless. For the 2nd one, it’s a higher level request for the developer. When you coding, you should not only think how to write correct code, but also need to conside how to write high performance code, at least, not bad performance. To meet this rule, minimum, you should to know the common data structures, understand the algorithm complexity of the functions of those structures. And the last one, write readable code, it’s the hardest part, and it’s the most careless thing to developer. The code once has been written down, it doesn’t mean it won’t be changed any more. In the life cycle of the program, it could be 10 years or more, new requirements will be preposed continuously. That means the code needs to be changed. The creator may has left, someone new has to take over the job, or the creator has a long time not touch the code, he cannot remember every details. A terrible code will lead the job much more difficult. </p>
+<p>To define a coding standard is hard. Everyone has their preferences. Here I just want to list some very common things, and somethings I really recommend.</p>
+<h2 id="Naming"><a href="#Naming" class="headerlink" title="Naming"></a>Naming</h2><p>It worths to spend some time to find out a name which can represent the exact meaning of the class, property, function or the variable. Don’t use abbreviation unless you sure it is very common for every reader. And don’t make the name too long, less than 30 characters should be fine. </p>
+<h3 id="Class-Name"><a href="#Class-Name" class="headerlink" title="Class Name"></a>Class Name</h3><p>A class represents an object, so the name of if should be a noun, and use Pascal case for the capitalizing the name, like <code>AppDomain</code>.</p>
+<h3 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h3><p>A property also represent an object, so the name also should be a noun, like <code>BackgroundColor</code>. It’s also use Pascal case. If the property represents a collection, should use plural form of the noun, like <code>Items</code>.</p>
+<h3 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h3><p>A function represent an activity, should use verb or the first word is verb, like <code>GetReader</code>. Or use <code>To</code> as the prefix, like <code>ToString</code>.</p>
+<h3 id="Fields"><a href="#Fields" class="headerlink" title="Fields"></a>Fields</h3><p>Field is similar with the property, but for the protected instance filed should use Camel case, like <code>connectionString</code>. The <code>public</code>, <code>internal</code>, <code>static</code> fields should follow the Pascal case.</p>
+<h3 id="Variables-and-Parameters"><a href="#Variables-and-Parameters" class="headerlink" title="Variables and Parameters"></a>Variables and Parameters</h3><p>Variable or parameter also should be noun. But it should use Camel case. For the very simple functions, variables named as <code>x</code>, <code>a</code>, or other single character is acceptable. And for the very simple loop, <code>i</code> as the index variable name is acceptable too.</p>
+<h3 id="Namespace"><a href="#Namespace" class="headerlink" title="Namespace"></a>Namespace</h3><p>Namespace should use noun to name it too. And use Pascal case.</p>
+<h3 id="Abbreviation"><a href="#Abbreviation" class="headerlink" title="Abbreviation"></a>Abbreviation</h3><p>It’s not recommended to use in classes, public properties, and public functions. Unless the name is too long, or the abbreviation is well known. If the name only have a word, it can (not must) use upper case for every charaters, like <code>ID</code>. If the name is composed of more than one words, for the abbreviation, only the first character can be upper case, like <code>XmlReader</code> or <code>HttpRequest</code>.</p>
+<h3 id="Conventions"><a href="#Conventions" class="headerlink" title="Conventions"></a>Conventions</h3><ul>
+<li>Exception<br>  Exception classes should use <code>Exception</code> as the suffix. For other cases, like <code>Reader</code>, <code>Event</code> also should add them as the suffix.</li>
+<li>Interface<br>  The name of the interface, should use <code>I</code> as the prefix.</li>
+<li>Try Functions<br>  Like <code>int.TryParse</code> function,  if you want to implement your own functions like this, please follow the same way, so that others can easy to know what it is and how to use it.</li>
+</ul>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><ul>
+<li>Add Xml document comment for public classes, properties, and functions. Give a short brief to describe what it is used for, what the input are expected, and what could be returned.</li>
+<li>Add Xml document comment for fields which name cannot explain the meaning or the usage.</li>
+<li>If you want to add some comments to explain something, describe why, not how.</li>
+<li>Don’t add useless comments, like who or when changed the code.</li>
+<li>If the code is useless, delete it, don’t comment it out.</li>
+<li>If the code changed, remember to update the comment.</li>
+<li>Keep in mind that the comments is obvious for now, but probably won’t be obvious several weeks from now.  </li>
+</ul>
+<h2 id="Formatting"><a href="#Formatting" class="headerlink" title="Formatting"></a>Formatting</h2><h3 id="Tab-VS-Space"><a href="#Tab-VS-Space" class="headerlink" title="Tab VS. Space"></a>Tab VS. Space</h3><h3 id="this"><a href="#this" class="headerlink" title="this"></a><code>this</code></h3><h3 id="Column-Guideline"><a href="#Column-Guideline" class="headerlink" title="Column Guideline"></a>Column Guideline</h3><h3 id="Remove-the-empty-multiple-lines"><a href="#Remove-the-empty-multiple-lines" class="headerlink" title="Remove the empty multiple lines."></a>Remove the empty multiple lines.</h3><h2 id="Enum-Type"><a href="#Enum-Type" class="headerlink" title="Enum Type"></a>Enum Type</h2><h2 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h2><h2 id="Use-Generic-Types"><a href="#Use-Generic-Types" class="headerlink" title="Use Generic Types"></a>Use Generic Types</h2>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/07/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -413,8 +538,14 @@
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">PS D:\tmpDocs\git_study&gt; git status</div><div class="line">On branch master</div><div class="line">Untracked files:</div><div class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">        file <span class="number">3</span>.txt</div><div class="line"></div><div class="line">nothing added to commit but untracked files present (use <span class="string">"git add"</span> to track)</div><div class="line">PS D:\tmpDocs\git_study&gt; git reset HEAD</div><div class="line">PS D:\tmpDocs\git_study&gt; git status</div><div class="line">On branch master</div><div class="line">Untracked files:</div><div class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">        file <span class="number">3</span>.txt</div><div class="line"></div><div class="line">nothing added to commit but untracked files present (use <span class="string">"git add"</span> to track)</div></pre></td></tr></table></figure>
 <p>If the file was added into stage, <code>git reset HEAD</code> will make the file to the <code>Untracked</code> status.</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">PS D:\tmpDocs\git_study&gt; git status</div><div class="line">On branch master</div><div class="line">Changes to be committed:</div><div class="line">  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> to unstage)</div><div class="line"></div><div class="line">        new file:   file <span class="number">3</span>.txt</div><div class="line"></div><div class="line">PS D:\tmpDocs\git_study&gt; git reset HEAD</div><div class="line">PS D:\tmpDocs\git_study&gt; git status</div><div class="line">On branch master</div><div class="line">Untracked files:</div><div class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">        file <span class="number">3</span>.txt</div><div class="line"></div><div class="line">nothing added to commit but untracked files present (use <span class="string">"git add"</span> to track)</div></pre></td></tr></table></figure>
-<p>For the file which has been modified, if it hasn’t been added to stage, <code>git reset HEAD</code> won’t change anything. If it has been added to stage, this command will change the file to <code>unstage</code> status.</p>
-<h3 id="Reset-with-hard-argument"><a href="#Reset-with-hard-argument" class="headerlink" title="Reset with hard argument"></a>Reset with hard argument</h3><i class="fa fa-warning fa-border fa-pull-left fa-2x"></i><code>--hard</code> argument will lead the uncommited changes lost, new files will become <code>untracked</code>. <strong>BE CAREFUL!</strong><br><br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">PS D:\tmpDocs\git_study&gt; git status</div><div class="line">On branch master</div><div class="line">Changes to be committed:</div><div class="line">  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> to unstage)</div><div class="line"></div><div class="line">        modified:   file <span class="number">2</span>.txt</div><div class="line"></div><div class="line">Untracked files:</div><div class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">        file <span class="number">3</span>.txt</div><div class="line"></div><div class="line">PS D:\tmpDocs\git_study&gt; git reset --hard HEAD</div><div class="line">HEAD is now at e359baa add file <span class="number">2</span></div><div class="line">PS D:\tmpDocs\git_study&gt; git status</div><div class="line">On branch master</div><div class="line">Untracked files:</div><div class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">        file <span class="number">3</span>.txt</div><div class="line"></div><div class="line">nothing added to commit but untracked files present (use <span class="string">"git add"</span> to track)</div></pre></td></tr></table></figure>
+<p>For the file which has been modified, if it hasn’t been added to stage, <code>git reset HEAD</code> won’t change anything. If it has been added to stage, this command will change the file to <code>unstage</code> status, but the changes won’t be lost.</p>
+<h3 id="Reset-with-hard-argument"><a href="#Reset-with-hard-argument" class="headerlink" title="Reset with hard argument"></a>Reset with hard argument</h3><i class="fa fa-warning fa-border fa-pull-left fa-2x"></i><code>--hard</code> argument will lead the uncommited <strong>changes lost</strong>, new files will become <code>untracked</code>. <strong>BE CAREFUL!</strong><br><br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">PS D:\tmpDocs\git_study&gt; git status</div><div class="line">On branch master</div><div class="line">Changes to be committed:</div><div class="line">  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> to unstage)</div><div class="line"></div><div class="line">        modified:   file <span class="number">2</span>.txt</div><div class="line"></div><div class="line">Untracked files:</div><div class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">        file <span class="number">3</span>.txt</div><div class="line"></div><div class="line">PS D:\tmpDocs\git_study&gt; git reset --hard HEAD</div><div class="line">HEAD is now at e359baa add file <span class="number">2</span></div><div class="line">PS D:\tmpDocs\git_study&gt; git status</div><div class="line">On branch master</div><div class="line">Untracked files:</div><div class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">        file <span class="number">3</span>.txt</div><div class="line"></div><div class="line">nothing added to commit but untracked files present (use <span class="string">"git add"</span> to track)</div></pre></td></tr></table></figure>
+<h3 id="reflog"><a href="#reflog" class="headerlink" title="reflog"></a>reflog</h3><p><code>reflog</code> command allows to check the commit history. </p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">PS D:\tmpDocs\git_study&gt; git log --graph --oneline</div><div class="line">* <span class="number">8</span>ef5474 update file <span class="number">2</span>.txt</div><div class="line">* e359baa add file <span class="number">2</span></div><div class="line">* <span class="number">100819</span>d add file <span class="number">1</span></div><div class="line">PS D:\tmpDocs\git_study&gt; git reset HEAD^ <span class="comment"># reset the HEAD to previous commit. HEAD^ points to the preivous commit.</span></div><div class="line">Unstaged changes after reset:</div><div class="line">M       file <span class="number">2</span>.txt</div><div class="line">PS D:\tmpDocs\git_study&gt; git status</div><div class="line">On branch master</div><div class="line">Changes not staged <span class="keyword">for</span> commit:</div><div class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to update what will be committed)</div><div class="line">  (use <span class="string">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</div><div class="line"></div><div class="line">        modified:   file <span class="number">2</span>.txt</div><div class="line"></div><div class="line">Untracked files:</div><div class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</div><div class="line"></div><div class="line">        file <span class="number">3</span>.txt</div><div class="line"></div><div class="line">no changes added to commit (use <span class="string">"git add"</span> and/or <span class="string">"git commit -a"</span>)</div><div class="line">PS D:\tmpDocs\git_study&gt; git reflog show master</div><div class="line">e359baa master@&#123;<span class="number">0</span>&#125;: reset: moving to HEAD^</div><div class="line"><span class="number">8</span>ef5474 master@&#123;<span class="number">1</span>&#125;: commit: update file <span class="number">2</span>.txt</div><div class="line">e359baa master@&#123;<span class="number">2</span>&#125;: commit: add file <span class="number">2</span></div><div class="line"><span class="number">100819</span>d master@&#123;<span class="number">3</span>&#125;: commit (initial): add file <span class="number">1</span></div></pre></td></tr></table></figure>
+<p>The <code>file 3.txt</code> also comes back, that because it was added to the stage.</p>
+<p>What if used <code>reset --hard</code> command?</p>
+<pre><code class="powershell">
+</code></pre>
 
           
         
@@ -821,39 +952,39 @@
 </thead>
 <tbody>
 <tr>
-<td><kbd>CTRL</kbd> + <kbd>A</kbd></td>
+<td><kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">A</kbd></td>
 <td>Move cursor to beginning of line</td>
 </tr>
 <tr>
-<td><kbd>CTRL</kbd> + <kbd>E</kbd></td>
+<td><kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">E</kbd></td>
 <td>Move cursor to end of line</td>
 </tr>
 <tr>
-<td><kbd>CTRL</kbd> + <kbd>R</kbd></td>
+<td><kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">R</kbd></td>
 <td>Search bash history</td>
 </tr>
 <tr>
-<td><kbd>CTRL</kbd> + <kbd>W</kbd></td>
+<td><kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">W</kbd></td>
 <td>Cut the last word</td>
 </tr>
 <tr>
-<td><kbd>CTRL</kbd> + <kbd>U</kbd></td>
+<td><kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">U</kbd></td>
 <td>Cut everything before the cursor</td>
 </tr>
 <tr>
-<td><kbd>CTRL</kbd> + <kbd>K</kbd></td>
+<td><kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">K</kbd></td>
 <td>Cut everything after the cursor</td>
 </tr>
 <tr>
-<td><kbd>CTRL</kbd> + <kbd>Y</kbd></td>
+<td><kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Y</kbd></td>
 <td>Paste the last thing to be cut</td>
 </tr>
 <tr>
-<td><kbd>CTRL</kbd> + <kbd>_</kbd></td>
+<td><kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">_</kbd></td>
 <td>Undo</td>
 </tr>
 <tr>
-<td><kbd>CTRL</kbd> + <kbd>L</kbd></td>
+<td><kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">L</kbd></td>
 <td>Clears terminal screen</td>
 </tr>
 </tbody>
@@ -1273,7 +1404,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1298,6 +1429,12 @@
         </div>
 
         
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
         
 
         

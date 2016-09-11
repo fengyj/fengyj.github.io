@@ -1,0 +1,617 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="fengyj, 冯裕坚, Eric Feng" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="The working code is the most accurate document.
+Don&apos;t know who said it
+I think, as a developer, when working, here are 3 basic rules needs to follow:
+
+Implement the requirement with no error;
+Acceptab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Coding Standard">
+<meta property="og:url" content="http://fengyj.github.io/2016/09/10/coding-standard/index.html">
+<meta property="og:site_name" content="Fengyj's Blog">
+<meta property="og:description" content="The working code is the most accurate document.
+Don&apos;t know who said it
+I think, as a developer, when working, here are 3 basic rules needs to follow:
+
+Implement the requirement with no error;
+Acceptab">
+<meta property="og:updated_time" content="2016-09-11T13:12:59.751Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Coding Standard">
+<meta name="twitter:description" content="The working code is the most accurate document.
+Don&apos;t know who said it
+I think, as a developer, when working, here are 3 basic rules needs to follow:
+
+Implement the requirement with no error;
+Acceptab">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://fengyj.github.io/2016/09/10/coding-standard/"/>
+
+  <title> Coding Standard | Fengyj's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Fengyj's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Love Coding, Love Money</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-cheatsheets">
+          <a href="/cheatsheets" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-medkit"></i> <br />
+            
+            Cheat Sheets
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Coding Standard
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-10T00:48:03+08:00" content="2016-09-10">
+              2016-09-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote><p>The working code is the most accurate document.</p>
+<footer><strong>Don't know who said it</strong></footer></blockquote>
+<p>I think, as a developer, when working, here are 3 basic rules needs to follow:</p>
+<ol>
+<li>Implement the requirement with no error;</li>
+<li>Acceptable performance;</li>
+<li>Readable code.</li>
+</ol>
+<p>The 1st one, it’s the very basic one. If code cannot work correctly, it’s useless. For the 2nd one, it’s a higher level request for the developer. When you coding, you should not only think how to write correct code, but also need to conside how to write high performance code, at least, not bad performance. To meet this rule, minimum, you should to know the common data structures, understand the algorithm complexity of the functions of those structures. And the last one, write readable code, it’s the hardest part, and it’s the most careless thing to developer. The code once has been written down, it doesn’t mean it won’t be changed any more. In the life cycle of the program, it could be 10 years or more, new requirements will be preposed continuously. That means the code needs to be changed. The creator may has left, someone new has to take over the job, or the creator has a long time not touch the code, he cannot remember every details. A terrible code will lead the job much more difficult. </p>
+<p>To define a coding standard is hard. Everyone has their preferences. Here I just want to list some very common things, and somethings I really recommend.</p>
+<h2 id="Naming"><a href="#Naming" class="headerlink" title="Naming"></a>Naming</h2><p>It worths to spend some time to find out a name which can represent the exact meaning of the class, property, function or the variable. Don’t use abbreviation unless you sure it is very common for every reader. And don’t make the name too long, less than 30 characters should be fine. </p>
+<h3 id="Class-Name"><a href="#Class-Name" class="headerlink" title="Class Name"></a>Class Name</h3><p>A class represents an object, so the name of if should be a noun, and use Pascal case for the capitalizing the name, like <code>AppDomain</code>.</p>
+<h3 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h3><p>A property also represent an object, so the name also should be a noun, like <code>BackgroundColor</code>. It’s also use Pascal case. If the property represents a collection, should use plural form of the noun, like <code>Items</code>.</p>
+<h3 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h3><p>A function represent an activity, should use verb or the first word is verb, like <code>GetReader</code>. Or use <code>To</code> as the prefix, like <code>ToString</code>.</p>
+<h3 id="Fields"><a href="#Fields" class="headerlink" title="Fields"></a>Fields</h3><p>Field is similar with the property, but for the protected instance filed should use Camel case, like <code>connectionString</code>. The <code>public</code>, <code>internal</code>, <code>static</code> fields should follow the Pascal case.</p>
+<h3 id="Variables-and-Parameters"><a href="#Variables-and-Parameters" class="headerlink" title="Variables and Parameters"></a>Variables and Parameters</h3><p>Variable or parameter also should be noun. But it should use Camel case. For the very simple functions, variables named as <code>x</code>, <code>a</code>, or other single character is acceptable. And for the very simple loop, <code>i</code> as the index variable name is acceptable too.</p>
+<h3 id="Namespace"><a href="#Namespace" class="headerlink" title="Namespace"></a>Namespace</h3><p>Namespace should use noun to name it too. And use Pascal case.</p>
+<h3 id="Abbreviation"><a href="#Abbreviation" class="headerlink" title="Abbreviation"></a>Abbreviation</h3><p>It’s not recommended to use in classes, public properties, and public functions. Unless the name is too long, or the abbreviation is well known. If the name only have a word, it can (not must) use upper case for every charaters, like <code>ID</code>. If the name is composed of more than one words, for the abbreviation, only the first character can be upper case, like <code>XmlReader</code> or <code>HttpRequest</code>.</p>
+<h3 id="Conventions"><a href="#Conventions" class="headerlink" title="Conventions"></a>Conventions</h3><ul>
+<li>Exception<br>  Exception classes should use <code>Exception</code> as the suffix. For other cases, like <code>Reader</code>, <code>Event</code> also should add them as the suffix.</li>
+<li>Interface<br>  The name of the interface, should use <code>I</code> as the prefix.</li>
+<li>Try Functions<br>  Like <code>int.TryParse</code> function,  if you want to implement your own functions like this, please follow the same way, so that others can easy to know what it is and how to use it.</li>
+</ul>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><ul>
+<li>Add Xml document comment for public classes, properties, and functions. Give a short brief to describe what it is used for, what the input are expected, and what could be returned.</li>
+<li>Add Xml document comment for fields which name cannot explain the meaning or the usage.</li>
+<li>If you want to add some comments to explain something, describe why, not how.</li>
+<li>Don’t add useless comments, like who or when changed the code.</li>
+<li>If the code is useless, delete it, don’t comment it out.</li>
+<li>If the code changed, remember to update the comment.</li>
+<li>Keep in mind that the comments is obvious for now, but probably won’t be obvious several weeks from now.  </li>
+</ul>
+<h2 id="Formatting"><a href="#Formatting" class="headerlink" title="Formatting"></a>Formatting</h2><h3 id="Tab-VS-Space"><a href="#Tab-VS-Space" class="headerlink" title="Tab VS. Space"></a>Tab VS. Space</h3><h3 id="this"><a href="#this" class="headerlink" title="this"></a><code>this</code></h3><h3 id="Column-Guideline"><a href="#Column-Guideline" class="headerlink" title="Column Guideline"></a>Column Guideline</h3><h3 id="Remove-the-empty-multiple-lines"><a href="#Remove-the-empty-multiple-lines" class="headerlink" title="Remove the empty multiple lines."></a>Remove the empty multiple lines.</h3><h2 id="Enum-Type"><a href="#Enum-Type" class="headerlink" title="Enum Type"></a>Enum Type</h2><h2 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h2><h2 id="Use-Generic-Types"><a href="#Use-Generic-Types" class="headerlink" title="Use Generic Types"></a>Use Generic Types</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/07/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://secure.gravatar.com/avatar/7ceb32a4e90df17ca6744bec521653d8"
+               alt="Fengyj" />
+          <p class="site-author-name" itemprop="name">Fengyj</p>
+          <p class="site-description motion-element" itemprop="description">fengyj's blog.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Naming"><span class="nav-number">1.</span> <span class="nav-text">Naming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-Name"><span class="nav-number">1.1.</span> <span class="nav-text">Class Name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Properties"><span class="nav-number">1.2.</span> <span class="nav-text">Properties</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Functions"><span class="nav-number">1.3.</span> <span class="nav-text">Functions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fields"><span class="nav-number">1.4.</span> <span class="nav-text">Fields</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Variables-and-Parameters"><span class="nav-number">1.5.</span> <span class="nav-text">Variables and Parameters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Namespace"><span class="nav-number">1.6.</span> <span class="nav-text">Namespace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Abbreviation"><span class="nav-number">1.7.</span> <span class="nav-text">Abbreviation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conventions"><span class="nav-number">1.8.</span> <span class="nav-text">Conventions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Comments"><span class="nav-number">2.</span> <span class="nav-text">Comments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Formatting"><span class="nav-number">3.</span> <span class="nav-text">Formatting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tab-VS-Space"><span class="nav-number">3.1.</span> <span class="nav-text">Tab VS. Space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this"><span class="nav-number">3.2.</span> <span class="nav-text">this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Column-Guideline"><span class="nav-number">3.3.</span> <span class="nav-text">Column Guideline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remove-the-empty-multiple-lines"><span class="nav-number">3.4.</span> <span class="nav-text">Remove the empty multiple lines.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Enum-Type"><span class="nav-number">4.</span> <span class="nav-text">Enum Type</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switch"><span class="nav-number">5.</span> <span class="nav-text">Switch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-Generic-Types"><span class="nav-number">6.</span> <span class="nav-text">Use Generic Types</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fengyj</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
