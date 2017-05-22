@@ -196,6 +196,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-worknotes">
+          <a href="/worknotes" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br />
+            
+            Work Notes
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
@@ -330,7 +340,16 @@
 <li>If the code changed, remember to update the comment.</li>
 <li>Keep in mind that the comments is obvious for now, but probably won’t be obvious several weeks from now.  </li>
 </ul>
-<h2 id="Formatting"><a href="#Formatting" class="headerlink" title="Formatting"></a>Formatting</h2><h3 id="Tab-VS-Space"><a href="#Tab-VS-Space" class="headerlink" title="Tab VS. Space"></a>Tab VS. Space</h3><h3 id="this"><a href="#this" class="headerlink" title="this"></a><code>this</code></h3><h3 id="Column-Guideline"><a href="#Column-Guideline" class="headerlink" title="Column Guideline"></a>Column Guideline</h3><h3 id="Remove-the-empty-multiple-lines"><a href="#Remove-the-empty-multiple-lines" class="headerlink" title="Remove the empty multiple lines."></a>Remove the empty multiple lines.</h3><h2 id="Enum-Type"><a href="#Enum-Type" class="headerlink" title="Enum Type"></a>Enum Type</h2><h2 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h2><h2 id="Use-Generic-Types"><a href="#Use-Generic-Types" class="headerlink" title="Use Generic Types"></a>Use Generic Types</h2>
+<h2 id="Formatting"><a href="#Formatting" class="headerlink" title="Formatting"></a>Formatting</h2><p>A well formatted article is more earier to be understund than bad one. For reading code it works just the same.</p>
+<h3 id="Tab-VS-Space"><a href="#Tab-VS-Space" class="headerlink" title="Tab VS. Space"></a>Tab VS. Space</h3><p>Tab or space, it’s a perpetual topic for developers. And there are more, Vim or EMacs, <code>{</code> in a new line or not, etc. Most of them are just personal preference, can’t say which one is really better then another. For the tab or space is the same, but I prefer the space. The reason is tab could be presented differently in different editors.</p>
+<h3 id="Use-this"><a href="#Use-this" class="headerlink" title="Use this."></a>Use <code>this.</code></h3><p>In some coding standards recommend do not write <code>this.</code>, but I suggest, do it. There is a benfit add <code>this.</code> before the fields or properties is it could let you to distinguish between the variables and properties/fields in the function easier. </p>
+<h3 id="Column-Guideline"><a href="#Column-Guideline" class="headerlink" title="Column Guideline"></a>Column Guideline</h3><p>Add a column guideline, and set the value to 120. It could reminder you that the line is to long. It is a very bad experience to scroll horizontal scrollbar from time to time when reading code. </p>
+<h3 id="Remove-the-empty-multiple-lines"><a href="#Remove-the-empty-multiple-lines" class="headerlink" title="Remove the empty multiple lines."></a>Remove the empty multiple lines.</h3><p>Please remove the empty lines when more than one.</p>
+<h2 id="Do-not-Hard-Code"><a href="#Do-not-Hard-Code" class="headerlink" title="Do not Hard Code"></a>Do not Hard Code</h2><p>Imagine this <code>order.Status = 1</code>, what does ‘1’ mean? New order, or others? Or when you typing <code>event.Type = &quot;SoemthingDone&quot;</code>, you could not realize there is a typo. Or if someone want to know what else values of <code>order.Status</code> could be, how can he easy to find the anwser? </p>
+<h3 id="Enum-Type"><a href="#Enum-Type" class="headerlink" title="Enum Type"></a>Enum Type</h3><p>The first choose is Enum. It has better performance than <code>string</code> type. And it supports <code>FlagAttribute</code>, you can use bit operators on Enum types.</p>
+<h3 id="Use-Constant"><a href="#Use-Constant" class="headerlink" title="Use Constant"></a>Use Constant</h3><p>The second way is to define a static class, and define many constants.</p>
+<h3 id="Use-Settings"><a href="#Use-Settings" class="headerlink" title="Use Settings"></a>Use Settings</h3><p>Use <code>Settings</code> class to instead of <code>AppConfig</code>. To use <code>AppConfig</code>, you</p>
+<h2 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h2><h2 id="Use-Generic-Types"><a href="#Use-Generic-Types" class="headerlink" title="Use Generic Types"></a>Use Generic Types</h2>
           
         
       
@@ -1456,8 +1475,8 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
